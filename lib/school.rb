@@ -12,6 +12,9 @@ class School
     @roster[grade_num]
   end 
   def sort
-    @roster.each {|key, val_array| val_array.sort}
+    @roster.each do |key, val_array| 
+      binding.pry
+      val_array.sort
+    end 
   end 
 end 
