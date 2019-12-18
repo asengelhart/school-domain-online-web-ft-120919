@@ -14,9 +14,10 @@ class School
     @roster[grade_num]
   end 
   def sort
+    result = {}
     @roster.each do |key, val_array| 
       binding.pry
-      val_array.sort
+      result[key] = val_array.sort
     end 
   end 
 end 
