@@ -8,4 +8,10 @@ class School
     @roster[grade_num] = [] if !@roster.include?(grade_num)
     @roster[grade_num] << student_name if !@roster[grade_num].include?(student_name)
   end 
+  def grade(grade_num)
+    @roster[grade_num]
+  end 
+  def sort
+    @roster.collect do {|key, val_array| val_array.sort}
+  end 
 end 
