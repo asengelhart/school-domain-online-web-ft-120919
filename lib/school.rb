@@ -12,6 +12,6 @@ class School
     @roster[grade_num]
   end 
   def sort
-    @roster.collect {|key, val_array| val_array.sort}
+    @roster.each {|key, val_array| val_array.sort}
   end 
 end 
