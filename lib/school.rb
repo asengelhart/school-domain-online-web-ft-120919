@@ -14,10 +14,10 @@ class School
     @roster[grade_num]
   end 
   def sort
-    result = {}
-    @roster.each do |key, val_array| 
-      binding.pry
-      result[key] = val_array.sort
+    @roster.inject({}) do |memo, (key, val_array)| 
+      #binding.pry
+      memo[key] = val_array.sort
+      memo
     end 
   end 
 end 
