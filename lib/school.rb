@@ -1,5 +1,3 @@
-require 'pry'
-
 class School
   attr_accessor :school_name, :roster
   def initialize(school_name)
@@ -15,7 +13,6 @@ class School
   end 
   def sort
     @roster.inject({}) do |memo, (key, val_array)| 
-      #binding.pry
       memo[key] = val_array.sort
       memo
     end 
